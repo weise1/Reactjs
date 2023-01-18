@@ -31,7 +31,7 @@ showMyDB(personalMovieDB.privat);
 
 function writeYouGenres() {
     for(let i = 1; i <= 3; i++) {
-        personalMovieDB.genres[i - 1] = prompt(`Ваш любимый жанр под номером ${i}`);
+        personalMovieDB.genres[i - 1] = prompt(`Ваш любимый жанр под номером ${i}`).trim();
     }
 }
 
@@ -45,7 +45,7 @@ writeYouGenres();
 
 function rememberMyFilms() {
     for (let i = 0; i < numberOfFilms; i++) {
-        const fimls = prompt('Один из последних просмотренных фильмов?'),
+        const fimls = prompt('Один из последних просмотренных фильмов?').trim(),
               star = prompt('На сколько оцените его?');
     
         if (fimls != null && star != null && fimls != '' && star != '' && fimls.length < 50) {
